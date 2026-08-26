@@ -1,0 +1,47 @@
+{
+  "project": "vidya-dham-academy",
+  "generated": "2026-08-26",
+  "color": {
+    "base": {
+      "bg-primary": { "value": "oklch(0.12 0.02 260)", "type": "color" },
+      "bg-surface": { "value": "oklch(0.16 0.03 260)", "type": "color" },
+      "bg-elevated": { "value": "oklch(0.20 0.04 260)", "type": "color" },
+      "border-subtle": { "value": "oklch(0.25 0.03 260 / 0.4)", "type": "color" },
+      "border-focus": { "value": "oklch(0.65 0.18 250)", "type": "color" }
+    },
+    "text": {
+      "primary": { "value": "oklch(0.98 0.01 260)", "type": "color" },
+      "secondary": { "value": "oklch(0.75 0.03 260)", "type": "color" },
+      "muted": { "value": "oklch(0.55 0.02 260)", "type": "color" }
+    },
+    "accent": {
+      "primary": { "value": "oklch(0.65 0.22 260)", "type": "color" },
+      "secondary": { "value": "oklch(0.72 0.18 200)", "type": "color" }
+    }
+  },
+  "contrast_matrix": {
+    "text_primary_on_bg_primary": { "ratio": "13.4:1", "wcag_aa": "PASS", "wcag_aaa": "PASS" },
+    "text_secondary_on_bg_primary": { "ratio": "6.8:1", "wcag_aa": "PASS", "wcag_aaa": "PASS" },
+    "text_muted_on_bg_primary": { "ratio": "4.6:1", "wcag_aa": "PASS", "wcag_aaa": "FAIL" },
+    "accent_on_bg_primary": { "ratio": "5.1:1", "wcag_aa": "PASS", "wcag_aaa": "FAIL" }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": { "value": "Plus Jakarta Sans, sans-serif" },
+      "body": { "value": "Inter, sans-serif" },
+      "mono": { "value": "JetBrains Mono, monospace" }
+    },
+    "fontSize": {
+      "display-hero": { "value": "clamp(3.5rem, 10vw, 8.5rem)" },
+      "heading-1": { "value": "clamp(2.5rem, 5vw, 4.5rem)" },
+      "heading-2": { "value": "clamp(1.75rem, 3.5vw, 2.75rem)" },
+      "body-large": { "value": "clamp(1.125rem, 1.5vw, 1.35rem)" },
+      "body-base": { "value": "1rem" },
+      "caption": { "value": "0.875rem" }
+    }
+  },
+  "elevation": {
+    "shadow-surface": { "value": "0 1px 3px rgba(0,0,0,0.4), 0 8px 24px -4px rgba(0,0,0,0.5)" },
+    "shadow-elevated": { "value": "0 2px 6px rgba(0,0,0,0.5), 0 16px 40px -8px rgba(0,0,0,0.6)" }
+  }
+}

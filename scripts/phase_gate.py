@@ -27,12 +27,14 @@ def get_git_modified_files(project_dir: str) -> list:
         cmd = ["git", "status", "--porcelain"]
         res = subprocess.run(cmd, cwd=project_dir, capture_output=True, text=True, check=True)
         files = []
-        for line in res.stdout.strip().split("\n"):
-            if not line:
+        for line in res.stdout.splitlines():
+            if not line or len(line) < 4:
                 continue
-            # Format: XY PATH or XY PATH -> PATH
-            parts = line[3:].strip().split(" -> ")
-            rel_path = normalize_posix(parts[-1])
+            # Format: XY PATH or XY PATH -> PATH (XY has 2 chars + 1 space delimiter)
+            path_part = line[3:].strip()
+            if " -> " in path_part:
+                path_part = path_part.split(" -> ")[-1]
+            rel_path = normalize_posix(path_part)
             files.append(rel_path)
         return files
     except Exception as e:
@@ -48,7 +50,7 @@ def verify_phase_spec(project_dir: str, phase_id: str) -> tuple:
         content = f.read()
 
     # Verify Skill Evidence & Formula Block presence
-    has_evidence_block = "## Skill Evidence & Formula Block" in content or "### Skill Evidence" in content
+    has_evidence_block = bool(re.search(r"##\s*(\d+\.)?\s*Skill Evidence", content, re.IGNORECASE) or "### Skill Evidence" in content)
     if not has_evidence_block:
         return False, f"specs/phase-{phase_id}-spec.md is missing '## Skill Evidence & Formula Block'"
 

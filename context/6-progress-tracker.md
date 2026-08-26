@@ -10,16 +10,16 @@
 - **Aesthetic Vibe**: `editorial-tech`
 - **Active Wave**: `Wave 3: Architecture & Spatial Wireframing`
 - **Active Stage**: `Stage 3`
-- **Active Sub-Phase**: `Phase 3.1`
-- **Last Updated**: `2026-08-26 13:58 UTC`
+- **Active Sub-Phase**: `Phase 3.4`
+- **Last Updated**: `2026-08-26 15:16 UTC`
 
 ---
 
 ## Multi-Session Resume Anchor
 - **Resume Directive**: In any new chat, simply prompt:  
-  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 3.1.`
-- **Active Target Artifact**: `docs/sitemap.md`
-- **Current DoD Status**: `[COMPLETED - Phase 2.3 | Wave 3 Architecture Next]`
+  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 3.4.`
+- **Active Target Artifact**: `docs/wireframe-spec.md`
+- **Current DoD Status**: `[COMPLETED - Phase 3.1 | Phase 3.4 Spatial Wireframing Next]`
 
 ---
 
@@ -33,7 +33,7 @@
 | **W1** | **1.4** | Tech Stack & Code Standards | `context/5-code-standards.md` | Stack invariants, AST rules, SSR safety | `[x]` |
 | **W2** | **2.1** | Multi-Modal Reference Ingestion | `reference/MANIFEST.md` | Video/image deconstructions & recipes | `[x]` |
 | **W2** | **2.3** | Style Lock Contract | `.tastemaker/style-lock.md` | Anti-slop constraints, surface philosophy | `[x]` |
-| **W3** | **3.1** | Content Strategy & Sitemap | `docs/sitemap.md` | Narrative arc, section inventory, header/footer | `[ ]` |
+| **W3** | **3.1** | Content Strategy & Sitemap | `docs/sitemap.md` | Narrative arc, section inventory, header/footer | `[x]` |
 | **W3** | **3.4** | Spatial Wireframing & Rhythm | `docs/wireframe-spec.md` | Container widths, optical alignments | `[ ]` |
 | **W4** | **4.1** | OKLCH Palette & Contrast Flooring | `context/2-design-tokens.json` | WCAG 2.2 AA (4.5:1 / 3:1) verified matrix | `[ ]` |
 | **W4** | **4.3** | Fluid Typography & Scales | `context/2-design-tokens.json` | Modular clamp() type scales, tabular numbers | `[ ]` |

@@ -24,7 +24,7 @@ def normalize_posix(path_str: str) -> str:
 
 def get_git_modified_files(project_dir: str) -> list:
     try:
-        cmd = ["git", "status", "--porcelain"]
+        cmd = ["git", "status", "--porcelain", "-uall"]
         res = subprocess.run(cmd, cwd=project_dir, capture_output=True, text=True, check=True)
         files = []
         for line in res.stdout.splitlines():
@@ -87,8 +87,16 @@ def check_blast_radius(project_dir: str, allowed_paths: list) -> tuple:
                 is_allowed = True
                 break
         
-        # Always allow progress tracker and specs
-        if mf.startswith("specs/") or mf == "context/6-progress-tracker.md" or mf == "RESUME.md" or mf == "NEXT_CHAT_PROMPT.md" or mf == ".design-lock.json":
+        # Always allow progress tracker, specs, design map, and phase gatekeeper itself
+        if (
+            mf.startswith("specs/")
+            or mf == "context/6-progress-tracker.md"
+            or mf == "RESUME.md"
+            or mf == "NEXT_CHAT_PROMPT.md"
+            or mf == ".design-lock.json"
+            or mf == "docs/DESIGN_MAP.mermaid"
+            or mf == "scripts/phase_gate.py"
+        ):
             is_allowed = True
 
         if not is_allowed:

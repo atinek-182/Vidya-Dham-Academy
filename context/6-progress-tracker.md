@@ -10,16 +10,16 @@
 - **Aesthetic Vibe**: `editorial-tech`
 - **Active Wave**: `Wave 5: Macrostructure & Surface Materiality`
 - **Active Stage**: `Stage 5`
-- **Active Sub-Phase**: `Phase 5.1`
-- **Last Updated**: `2026-08-26 17:30 UTC`
+- **Active Sub-Phase**: `Phase 5.4`
+- **Last Updated**: `2026-08-26 18:05 UTC`
 
 ---
 
 ## Multi-Session Resume Anchor
 - **Resume Directive**: In any new chat, simply prompt:  
-  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 5.1.`
-- **Active Target Artifact**: Layout skeleton & `docs/DESIGN_MAP.mermaid`
-- **Current DoD Status**: `[COMPLETED - Phase 4.3 | Wave 4 Gate Passed | Phase 5.1 Next]`
+  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 5.4.`
+- **Active Target Artifact**: Component manifest & state matrix (`context/3-ui-manifest.md`)
+- **Current DoD Status**: `[COMPLETED - Phase 5.1 | Phase 5.4 Next]`
 
 ---
 
@@ -37,7 +37,7 @@
 | **W3** | **3.4** | Spatial Wireframing & Rhythm | `docs/wireframe-spec.md` | Container widths, optical alignments | `[x]` |
 | **W4** | **4.1** | OKLCH Palette & Contrast Flooring | `context/2-design-tokens.json` | WCAG 2.2 AA (4.5:1 / 3:1) verified matrix | `[x]` |
 | **W4** | **4.3** | Fluid Typography & Scales | `context/2-design-tokens.json` | Modular clamp() type scales, tabular numbers | `[x]` |
-| **W5** | **5.1** | Anti-Monoculture Layout & Obys Grid| Layout skeleton | Obys 140px vertical rhythm, 12-col grid | `[ ]` |
+| **W5** | **5.1** | Anti-Monoculture Layout & Obys Grid| Layout skeleton | Obys 140px vertical rhythm, 12-col grid | `[x]` |
 | **W5** | **5.4** | UI Component Manifest | `context/3-ui-manifest.md` | Exhaustive component & state catalog | `[ ]` |
 | **W5** | **6.1** | Tactile Elevation & Hairline Borders| Surface CSS module | Concentric border radii, layered shadows | `[ ]` |
 | **W5** | **6.3** | Atmospheric Noise & Shaders | Background layer | Backdrop blur masks, procedural noise | `[ ]` |
@@ -62,6 +62,6 @@
 | **Wave 2 Gate** | Visual Style Contract Sealed | Zero slop traits | `checkpoint/wave-2-aesthetics` | `[PASSED]` |
 | **Wave 3 Gate** | Scrollytelling Sitemap Validated | Fluid hierarchy | `checkpoint/wave-3-structure` | `[PASSED]` |
 | **Wave 4 Gate** | Mathematical Token Contrast Floor | WCAG 2.2 AA (>= 85) | `checkpoint/wave-4-tokens` | `[PASSED]` |
-| **Wave 5 Gate** | Obys Spatial & Surface Hardening | No horizontal scroll | `checkpoint/wave-5-surfaces` | `[PENDING]` |
+| **Wave 5 Gate** | Obys Spatial & Surface Hardening | No horizontal scroll | `checkpoint/wave-5-surfaces` | `[ACTIVE]` |
 | **Wave 6 Gate** | 60fps Motion & Asset Integration | Score >= 85/100 | `checkpoint/wave-6-components` | `[PENDING]` |
 | **Wave 7 Gate** | Multi-Engine Visual QA & SEO | Zero AST errors | `checkpoint/wave-7-final` | `[PENDING]` |

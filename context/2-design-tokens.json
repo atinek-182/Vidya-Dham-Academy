@@ -41,35 +41,75 @@
     "focus_ring_on_canvas_base": { "ratio": "9.38:1", "wcag_ui_1_4_11": "PASS", "floor": "3.0:1" }
   },
   "scale_principles": {
-    "golden_ratio": {
-      "phi": 1.6180339887,
-      "base_rem": 1.0,
+    "modular_ratio_progression": {
+      "mobile_floor_ratio": 1.250,
+      "mobile_floor_name": "Major Third (1.250)",
+      "desktop_ceiling_ratio": 1.6180339887,
+      "desktop_ceiling_name": "Golden Ratio (phi = 1.618)",
       "base_px": 16,
-      "scale_steps": {
-        "caption": { "formula": "16 / 1.618", "px": 10, "rem": 0.625 },
-        "body": { "formula": "16 * 1.0", "px": 16, "rem": 1.0 },
-        "subheading_h4": { "formula": "16 * 1.618^1", "px": 26, "rem": 1.625 },
-        "title_h3": { "formula": "16 * 1.618^2", "px": 42, "rem": 2.625 },
-        "heading_h2": { "formula": "16 * 1.618^3", "px": 68, "rem": 4.25 },
-        "display_hero_h1": { "formula": "16 * 1.618^4", "px": 110, "rem": 6.875 }
-      },
-      "responsive_policy": "Mobile floor clamped at Major Third (1.25) to prevent overflow; Desktop ceiling expands fluidly into Golden Ratio (1.618)."
+      "base_rem": 1.0,
+      "viewport_range": { "min_px": 375, "max_px": 1440 },
+      "interpolation_policy": "Continuous linear slope-intercept CSS clamp() derivation without breakpoint stepping"
     }
   },
   "typography": {
     "fontFamily": {
-      "display": { "value": "Geist, sans-serif" },
-      "body": { "value": "DM Sans, sans-serif" },
-      "mono": { "value": "JetBrains Mono, monospace" }
+      "display": { "value": "Newsreader, serif", "opticalSizing": "opsz 6-72", "designer": "Production Type", "role": "monumental editorial display headlines and section titles" },
+      "body": { "value": "Schibsted Grotesk, sans-serif", "designer": "Bakken & Baeck", "role": "continuous body copy, UI controls, navigation, and interactive form fields" },
+      "mono": { "value": "JetBrains Mono, monospace", "role": "ray optics derivations, calculus notation, live timers, and tabular telemetry data" }
     },
     "fontSize": {
-      "display-hero": { "value": "clamp(3.0rem, 2.0rem + 5.0vw, 6.875rem)" },
-      "heading-1": { "value": "clamp(2.25rem, 1.75rem + 3.0vw, 4.25rem)" },
-      "heading-2": { "value": "clamp(1.75rem, 1.35rem + 2.0vw, 2.625rem)" },
-      "heading-3": { "value": "clamp(1.25rem, 1.1rem + 0.8vw, 1.625rem)" },
-      "body-large": { "value": "clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem)" },
-      "body-base": { "value": "1.0rem" },
-      "caption": { "value": "0.875rem" }
+      "display-hero": { "value": "clamp(4.000rem, 2.327rem + 7.14vw, 8.750rem)", "mobile_px": 64, "desktop_px": 140, "role": "monumental hero headline" },
+      "heading-1": { "value": "clamp(2.500rem, 1.444rem + 4.51vw, 5.500rem)", "mobile_px": 40, "desktop_px": 88, "role": "major section monument titles" },
+      "heading-2": { "value": "clamp(2.000rem, 1.208rem + 3.38vw, 4.250rem)", "mobile_px": 32, "desktop_px": 68, "role": "bento card module headers" },
+      "heading-3": { "value": "clamp(1.625rem, 1.273rem + 1.50vw, 2.625rem)", "mobile_px": 26, "desktop_px": 42, "role": "curriculum tier & faculty titles" },
+      "heading-4": { "value": "clamp(1.250rem, 1.118rem + 0.56vw, 1.625rem)", "mobile_px": 20, "desktop_px": 26, "role": "dossier subheadings & modal headers" },
+      "body-lead": { "value": "clamp(1.125rem, 1.037rem + 0.38vw, 1.375rem)", "mobile_px": 18, "desktop_px": 22, "role": "section intro lead paragraphs" },
+      "body-base": { "value": "1.000rem", "mobile_px": 16, "desktop_px": 16, "role": "standard long-form body text" },
+      "caption": { "value": "clamp(0.812rem, 0.790rem + 0.09vw, 0.875rem)", "mobile_px": 13, "desktop_px": 14, "role": "form hints, badge labels, and timestamps" },
+      "code-meta": { "value": "clamp(0.750rem, 0.728rem + 0.09vw, 0.812rem)", "mobile_px": 12, "desktop_px": 13, "role": "scientific telemetry, formula notation, and utility chips" }
+    },
+    "lineHeight": {
+      "display-hero": { "value": "0.86", "role": "ultra-tight architectural compaction for monumental hero display" },
+      "heading-1": { "value": "1.05", "role": "tight section anchor heading line-height" },
+      "heading-2": { "value": "1.12", "role": "bento grid module title spacing" },
+      "heading-3": { "value": "1.20", "role": "card titles" },
+      "heading-4": { "value": "1.30", "role": "dossier titles" },
+      "body-lead": { "value": "1.50", "role": "comfortable lead paragraph reading" },
+      "body-base": { "value": "1.55", "role": "relaxed continuous body reading" },
+      "caption": { "value": "1.40", "role": "compact labels and badge tags" },
+      "code-meta": { "value": "1.45", "role": "monospace formulas and telemetry callouts" }
+    },
+    "letterSpacing": {
+      "display-hero": { "value": "-0.035em", "role": "monumental negative optical tracking" },
+      "heading-1": { "value": "-0.025em", "role": "section heading negative tracking" },
+      "heading-2": { "value": "-0.020em", "role": "bento heading negative tracking" },
+      "heading-3": { "value": "-0.015em", "role": "card title optical tracking" },
+      "heading-4": { "value": "-0.010em", "role": "subheading tracking" },
+      "normal": { "value": "0.000em", "role": "body prose neutral tracking" },
+      "wide": { "value": "+0.025em", "role": "subtle uppercase button tracking" },
+      "tracking-caps": { "value": "+0.060em", "role": "uppercase monospace tags and telemetry badges" }
+    },
+    "fontWeight": {
+      "regular": { "value": "400" },
+      "medium": { "value": "500" },
+      "semibold": { "value": "600" },
+      "bold": { "value": "700" },
+      "extrabold": { "value": "800" }
+    },
+    "openType": {
+      "tabularNumbers": { "property": "font-variant-numeric: tabular-nums", "role": "seat counters, fee matrices, and live countdown timers" },
+      "slashedZero": { "property": "font-feature-settings: 'zero' 1", "role": "disambiguation between numeral 0 and letter O in mathematical formulas" },
+      "contextualAlternates": { "property": "font-feature-settings: 'calt' 1", "role": "smooth letter-connection alternates in Newsreader and Schibsted Grotesk" },
+      "discretionaryLigatures": { "property": "font-feature-settings: 'dlig' 1", "role": "editorial headline ligatures for academic prestige" },
+      "proportionalFigures": { "property": "font-variant-numeric: proportional-nums", "role": "prose numerals embedded within body text" }
+    },
+    "typographicRules": {
+      "maxMeasure": { "value": "65ch", "css": "max-width: 65ch", "role": "cap long-form reading lines at optimal 55-75 characters" },
+      "headingWrap": { "value": "text-wrap: balance", "role": "prevent awkward lopsided breaks on multi-line headings" },
+      "proseWrap": { "value": "text-wrap: pretty", "role": "prevent single-word orphan drops on paragraph ends" },
+      "overflowWrap": { "value": "overflow-wrap: break-word", "role": "prevent container breakout from long URLs or math notation" },
+      "mobileInputFloor": { "value": "16px", "role": "prevent iOS Safari automatic viewport zooming on form focus" }
     }
   },
   "elevation": {

@@ -1,6 +1,6 @@
-# SESSION PROMPT: CHAT 06
-## Active Phase: 2.3 -- Socratic Style-Lock Contract & Anti-Slop Seal
-### Wave: Wave 2 (Multi-Modal Reference & Mood Lock) -- [WAVE 2 GATEWAY]
+# SESSION PROMPT: CHAT 07
+## Active Phase: 3.1 & 3.2 -- Content Strategy, Scrollytelling Narrative & Sitemaps
+### Wave: Wave 3 (Architecture & Spatial Wireframing)
 
 ---
 
@@ -11,12 +11,11 @@
 ---
 
 ## Scope & Blast Radius Lock
-- **Mandatory Core Skills**: [`tastemaker`](file:///d:/Design-OS/.agents/skills/tastemaker/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md), target aesthetic skill (`editorial-tech`)
+- **Mandatory Core Skills**: [`content-strategy`](file:///d:/Design-OS/.agents/skills/content-strategy/SKILL.md), [`information-architecture`](file:///d:/Design-OS/.agents/skills/information-architecture/SKILL.md), [`navigation-patterns`](file:///d:/Design-OS/.agents/skills/navigation-patterns/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
 - **Ambient Umbrella Skills**: [`build-awwwards-quality-sites`](file:///d:/Design-OS/.agents/skills/build-awwwards-quality-sites/SKILL.md), [`cinematic-gsap-lenis-motion-system`](file:///d:/Design-OS/.agents/skills/cinematic-gsap-lenis-motion-system/SKILL.md)
 - **Allowed Write Paths**:
-  - `.tastemaker/style-lock.md`
-  - `.tastemaker/log.json`
-  - `specs/phase-2.3-spec.md`
+  - `docs/sitemap.md`
+  - `specs/phase-3.1-spec.md`
   - `context/6-progress-tracker.md`
   - `RESUME.md`
   - `NEXT_CHAT_PROMPT.md`
@@ -27,53 +26,42 @@
 ## Execution Lifecycle
 
 ### Step 1: Auto-Wake & Status Audit
-1. Read `RESUME.md` and confirm Phase 2.3 is active.
+1. Read `RESUME.md` and confirm Phase 3.1 is active.
 2. Render `docs/DESIGN_MAP.mermaid`.
-3. Read `reference/MANIFEST.md` to load the deconstructed reference recipes.
+3. Read `context/1-brand-and-vision.md` and `.tastemaker/style-lock.md`.
 
 ### Step 1.5: Security Pre-Flight (VibeSec Protocol)
 Run the [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md) security check:
-- Ensure the style-lock contract mandates secure asset pipelines (SVG sanitization, no unvetted CDNs).
+- Ensure planned navigation routes and query parameters prevent open-redirect vulnerabilities.
 - Document security baseline status as `[PASS]`.
 
 ### Step 2: Socratic Phase Interview (/grill-me)
-Conduct the aesthetic style-lock interview. **Ask 2-3 questions per turn**:
+Conduct the content strategy & sitemap interview. **Ask 2-3 questions per turn**:
 - **Turn 1**:
-  - *Question 1*: Confirm primary visual archetype:
-    - (A) Dark Mesh Gradient & Planetary Depth (`mesh-gradient-dark-blue-clean`)
-    - (B) Editorial Tech & Asymmetric Typography (`editorial-tech`)
-    - (C) Clean Minimal Beige & Warm Neutral Light Mode (`clean-minimal-beige-light-mode`)
-    - (D) High-Contrast Skeuomorphic & Paper Elevation (`high-contrast-skeuomorphic-clean`)
-    - (E) Dark Glassmorphism & Frosted Glow Borders (`glass-dark-ui`)
-  - *Question 2*: Surface materiality and border treatment (hairline gradient borders, liquid metal accents, or quiet borderless grids).
+  - *Question 1*: The scrollytelling narrative arc: How should the visual narrative unfold as the user scrolls from hero to conversion?
+  - *Question 2*: Persistent navigation structure: Floating glass dock vs. top fixed navigation bar vs. minimal full-screen drawer.
 - **Turn 2**:
-  - *Question 3*: Atmospheric layer (subtle SVG noise, procedural Bayer dithering, or stepped progressive blur).
-  - *Question 4*: Explicit Keep-vs-Discard constraints to permanently lock into the contract.
+  - *Question 3*: Section inventory and sequence (Hero -> Credibility -> Core Innovation Bento -> Deep Dive Pinned Track -> Conversion Anchor -> Semantic Footer).
+  - *Question 4*: Micro-copy voice and tone guidelines (concise, high-conviction, zero corporate jargon).
 *Provide concept explanations, structured options (A/B/C), and expert recommendations for each.*
 
 ### Step 3: Pre-Write Adversarial Audit (/roast)
-Convene the 3-persona mini-audit (Contrarian, Buyer, Systems Architect) to test the style contract against visual cliches. Emit:
-`specs/phase-2.3-spec.md` with `## Skill Evidence & Formula Block` citing `tastemaker`.
+Convene the 3-persona mini-audit (Contrarian, Logician, Buyer) to audit the narrative pacing. Emit:
+`specs/phase-3.1-spec.md` with `## Skill Evidence & Formula Block` citing `content-strategy` and `navigation-patterns`.
 
 ### Step 4: Gated Implementation
-1. Create `.tastemaker/style-lock.md` locking visual tokens, surface materials, and anti-slop rules.
-2. Record rotation archetype into `.tastemaker/log.json`.
-3. Run the deterministic gatekeeper:
+1. Write the full sitemap and section taxonomy to `docs/sitemap.md`.
+2. Run the deterministic gatekeeper:
    ```bash
-   python scripts/phase_gate.py --phase 2.3 --allowed .tastemaker/style-lock.md .tastemaker/log.json specs/phase-2.3-spec.md
+   python scripts/phase_gate.py --phase 3.1 --allowed docs/sitemap.md specs/phase-3.1-spec.md
    ```
 
-### Step 5: Wave 2 Gate Checkpoint & Handoff
-1. Check off Phase 2.3 in `context/6-progress-tracker.md`.
-2. Mark **Wave 2 Gate: [PASSED]**.
-3. Create local git checkpoint tag:
-   ```bash
-   git tag -a "checkpoint/wave-2-aesthetics" -m "Wave 2 verified: Aesthetic Style-Lock Contract sealed"
-   ```
-4. Run prompt hydrator: `python scripts/hydrate_prompt.py --next-chat 7`.
-5. Update `RESUME.md` with active phase set to `3.1` (Wave 3: Architecture & Spatial Wireframing).
-6. Print the exact prompt for Chat 07:
+### Step 5: Handoff & Resume Update
+1. Check off Phase 3.1 in `context/6-progress-tracker.md`.
+2. Run prompt hydrator: `python scripts/hydrate_prompt.py --next-chat 8`.
+3. Update `RESUME.md` with active phase set to `3.4`.
+4. Print the exact prompt for Chat 08:
    ```markdown
-   Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 3.1.
+   Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 3.4.
    ```
-7. **STOP calling tools immediately.**
+5. **STOP calling tools immediately.**

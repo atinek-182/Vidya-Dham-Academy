@@ -10,16 +10,16 @@
 - **Aesthetic Vibe**: `editorial-tech`
 - **Active Wave**: `Wave 6: Component Engineering, Motion & Assets`
 - **Active Stage**: `Stage 8`
-- **Active Sub-Phase**: `Phase 8.1`
-- **Last Updated**: `2026-08-27 04:50 UTC`
+- **Active Sub-Phase**: `Phase 8.3`
+- **Last Updated**: `2026-08-27 04:55 UTC`
 
 ---
 
 ## Multi-Session Resume Anchor
 - **Resume Directive**: In any new chat, simply prompt:  
-  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 8.1.`
-- **Active Target Artifact**: Lenis smooth scroll & GSAP ScrollTrigger timelines (`context/4-motion-choreography.md`, `specs/phase-8.1-spec.md`)
-- **Current DoD Status**: `[COMPLETED - Phase 7.3 | Phase 8.1 Next]`
+  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 8.3.`
+- **Active Target Artifact**: Typographic reveals & kinetic micro-interactions (`specs/phase-8.3-spec.md`)
+- **Current DoD Status**: `[COMPLETED - Phase 8.1 | Phase 8.3 Next]`
 
 ---
 
@@ -43,7 +43,7 @@
 | **W5** | **6.3** | Atmospheric Noise & Shaders | Background layer | Backdrop blur masks, procedural noise | `[x]` |
 | **W6** | **7.1** | Atomic Components & States | Reusable components | Scale-on-press (0.97), state machine logic | `[x]` |
 | **W6** | **7.3** | Form UX, Validation & Feedback | Form components | Inline validation, Sonner toasts | `[x]` |
-| **W6** | **8.1** | Lenis Scroll & GSAP Scrollytelling | `context/4-motion-choreography.md` | Pinned sections, scrubbed timelines | `[ ]` |
+| **W6** | **8.1** | Lenis Scroll & GSAP Scrollytelling | `context/4-motion-choreography.md` | Pinned sections, scrubbed timelines | `[x]` |
 | **W6** | **8.3** | Typographic Reveals & Physics | Motion components | Word-by-word reveal, magnetic cursor | `[ ]` |
 | **W6** | **8.4** | Interactive 3D / WebGL FX | Canvas stages | Reactive WebGL background or 3D globe | `[ ]` |
 | **W6** | **9.1** | Vector Icons & CC0 Photos | `src/assets/` | Sanitized Solar SVGs, authentic CC0 photos | `[ ]` |

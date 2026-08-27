@@ -1,11 +1,11 @@
 # [RESUME ANCHOR] vidya-dham-academy
 
 > **Project Root**: `projects/Websites/vidya-dham-academy`  
-> **Last Synchronized**: `2026-08-27 04:50 UTC`  
+> **Last Synchronized**: `2026-08-27 04:56 UTC`  
 > **Active Stage**: Stage 8 (Motion Choreography, Kinetic Physics & WebGL FX)  
-> **Active Sub-Phase**: Phase 8.1 (Lenis Smooth Scroll & GSAP ScrollTrigger Scrollytelling)  
-> **Active Chat Session**: Chat 17  
-> **Status**: `[READY FOR PHASE 8.1]`  
+> **Active Sub-Phase**: Phase 8.3 (Typographic Reveals & Kinetic Micro-Interaction Dynamics)  
+> **Active Chat Session**: Chat 18  
+> **Status**: `[READY FOR PHASE 8.3]`  
 
 ---
 
@@ -14,22 +14,22 @@
 Whenever you open a fresh chat in your IDE, simply paste:
 
 ```markdown
-Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 8.1.
+Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 8.3.
 ```
 
 ---
 
 ## Active Phase Summary & Invariants
 
-- **Active Sub-Phase**: `Phase 8.1 -- Lenis Smooth Scroll & GSAP ScrollTrigger Scrollytelling`
+- **Active Sub-Phase**: `Phase 8.3 -- Typographic Reveals & Kinetic Micro-Interaction Dynamics`
 - **Mandatory Pre-flight**: Run [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md) security check.
 - **Zero-Emoji Mandate**: Absolutely zero emojis across chat, code, and documentation. Use `[PASS]`, `[FAIL]`, `[ACTIVE]`.
-- **Target Artifact**: Lenis smooth scroll & GSAP ScrollTrigger timelines (`context/4-motion-choreography.md`, `specs/phase-8.1-spec.md`)
-- **Mandatory Skills**: [`cinematic-gsap-lenis-motion-system`](file:///d:/Design-OS/.agents/skills/cinematic-gsap-lenis-motion-system/SKILL.md), [`build-awwwards-quality-sites`](file:///d:/Design-OS/.agents/skills/build-awwwards-quality-sites/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
+- **Target Artifact**: Typographic reveals & kinetic micro-interactions (`specs/phase-8.3-spec.md`)
+- **Mandatory Skills**: [`staggered-word-reveal`](file:///d:/Design-OS/.agents/skills/staggered-word-reveal/SKILL.md), [`apple-design`](file:///d:/Design-OS/.agents/skills/apple-design/SKILL.md), [`beam-glow-states`](file:///d:/Design-OS/.agents/skills/beam-glow-states/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
 - **Allowed Write Paths**:
   - `src/motion/**/*`
-  - `context/4-motion-choreography.md`
-  - `specs/phase-8.1-spec.md`
+  - `src/components/effects/**/*`
+  - `specs/phase-8.3-spec.md`
   - `context/6-progress-tracker.md`
   - `RESUME.md`
   - `NEXT_CHAT_PROMPT.md`
@@ -56,7 +56,8 @@ graph TD
   P6_1 --> P6_3["6.3 Atmospheric Noise & Shaders"]:::completed
   P6_3 --> P7_1["7.1 Atomic Components & States"]:::completed
   P7_1 --> P7_3["7.3 Form UX & Validation"]:::completed
-  P7_3 --> P8_1["8.1 Lenis & GSAP Scrollytelling"]:::active
+  P7_3 --> P8_1["8.1 Lenis & GSAP Scrollytelling"]:::completed
+  P8_1 --> P8_3["8.3 Typographic Reveals & Physics"]:::active
 
   classDef completed fill:#059669,stroke:#10b981,color:#ffffff,stroke-width:2px;
   classDef active fill:#d97706,stroke:#f59e0b,color:#ffffff,stroke-width:3px;

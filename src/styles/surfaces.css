@@ -1,0 +1,301 @@
+/**
+ * Vidya Dham Academy - Surface Materiality & Elevation CSS Module
+ * Phase 6.1: Tactile Surface Elevation & Hairline Border Engineering
+ * 
+ * Complies with:
+ * - beautiful-shadows: Multi-stop neutral ambient occlusion without muddy halos
+ * - css-border-gradient: 0.5px/1px dual-layer padding-box / border-box incident light borders
+ * - liquid-metal-border: Reserved fallbacks and active highlight contracts
+ * - Concentric radius geometry: R_inner = max(0, R_outer - P_padding)
+ * - VibeSec: 100% self-contained, zero external imports, strict GPU composite isolation
+ */
+
+:root {
+  /* =========================================================================
+     1. Surface Color Tokens (OKLCH Native & sRGB Fallbacks)
+     ========================================================================= */
+  --surface-canvas: oklch(0.08 0.015 260);        /* #05070c: Canvas base */
+  --surface-card: oklch(0.13 0.020 260);          /* #0b0f19: Bento card surface */
+  --surface-card-alpha: rgba(11, 15, 25, 0.85);  /* Translucent bento card */
+  --surface-modal: oklch(0.18 0.025 260);         /* #121826: Dialog popover surface */
+  --surface-modal-alpha: rgba(18, 24, 38, 0.94); /* Inspection drawer fill */
+  --surface-glass: rgba(11, 15, 25, 0.72);       /* Frosted glass floating dock */
+  --surface-hover: oklch(0.15 0.022 260);         /* Card hover fill */
+
+  /* =========================================================================
+     2. Hairline Border Tokens
+     ========================================================================= */
+  --border-subtle: oklch(0.24 0.025 260 / 0.45); /* 0.5px structural hairline */
+  --border-strong: oklch(0.32 0.030 260);         /* Card hover border */
+  --border-focus: oklch(0.76 0.16 75);            /* #f59e0b: Focus ring & active border */
+  --border-focus-glow: rgba(245, 158, 11, 0.25);
+
+  /* Gradient border stops (135deg incident lighting) */
+  --border-grad-highlight: rgba(255, 255, 255, 0.18);
+  --border-grad-mid: rgba(255, 255, 255, 0.04);
+  --border-grad-fade: rgba(255, 255, 255, 0.01);
+  --border-grad-amber-start: rgba(245, 158, 11, 0.45);
+  --border-grad-amber-mid: rgba(251, 191, 36, 0.20);
+  --border-grad-amber-end: rgba(255, 255, 255, 0.06);
+
+  /* =========================================================================
+     3. Harmonic Concentric Radii Geometry
+     Formula: R_inner = max(0px, R_outer - P_padding)
+     ========================================================================= */
+  --radius-bento: 16px;
+  --radius-hero: 20px;
+  --radius-modal: 24px;
+  --radius-control: 8px;
+  --radius-pill: 9999px;
+  --padding-bento-card: 24px;
+  --padding-bento-compact: 12px;
+
+  /* =========================================================================
+     4. Beautiful Shadows (Multi-Stop Neutral Ambient Occlusion)
+     ========================================================================= */
+  --shadow-beautiful-sm: 
+    0px 2px 3px -1px rgba(0, 0, 0, 0.10),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+
+  --shadow-beautiful-md: 
+    0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+    0px 1px 1px -0.5px rgba(0, 0, 0, 0.06),
+    0px 3px 3px -1.5px rgba(0, 0, 0, 0.06),
+    0px 6px 6px -3px rgba(0, 0, 0, 0.06),
+    0px 12px 12px -6px rgba(0, 0, 0, 0.06),
+    0px 24px 24px -12px rgba(0, 0, 0, 0.06);
+
+  --shadow-beautiful-lg: 
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.060),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.120);
+
+  /* Dark-Mode Specular Elevation (Ambient depth + Top specular hairline) */
+  --shadow-specular-sm: 
+    0 2px 8px -1px rgba(0, 0, 0, 0.40),
+    0 1px 2px 0 rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+
+  --shadow-specular-md: 
+    0 4px 20px -2px rgba(0, 0, 0, 0.45),
+    0 2px 6px -1px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+
+  --shadow-specular-lg: 
+    0 12px 40px -4px rgba(0, 0, 0, 0.60),
+    0 4px 12px -2px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.10);
+
+  --shadow-focus-amber: 
+    0 0 0 2px var(--surface-canvas),
+    0 0 0 4px var(--border-focus);
+}
+
+/* =========================================================================
+   5. Surface Material Utility Classes
+   ========================================================================= */
+
+/* Base Canvas */
+.surface-canvas {
+  background-color: var(--surface-canvas);
+}
+
+/* Bento Card Surface */
+.surface-card {
+  background-color: var(--surface-card-alpha);
+  border-radius: var(--radius-bento);
+  box-shadow: var(--shadow-specular-md);
+  position: relative;
+}
+
+/* Floating Glass Chrome (Header Dock & Drawers) */
+.surface-glass {
+  background-color: var(--surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Elevated Modal / Inspection Drawer Surface */
+.surface-modal {
+  background-color: var(--surface-modal-alpha);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-modal);
+  box-shadow: var(--shadow-specular-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+/* =========================================================================
+   6. Hairline Gradient Border Utilities (css-border-gradient)
+   ========================================================================= */
+
+/* Dual-layer incident light gradient border */
+.border-gradient-hairline {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface-card-alpha), var(--surface-card-alpha)) padding-box,
+    linear-gradient(
+      135deg,
+      var(--border-grad-highlight),
+      var(--border-grad-mid) 45%,
+      var(--border-grad-fade)
+    ) border-box;
+}
+
+/* Active / Hover amber gradient border */
+.border-gradient-amber {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface-card-alpha), var(--surface-card-alpha)) padding-box,
+    linear-gradient(
+      135deg,
+      var(--border-grad-amber-start),
+      var(--border-grad-amber-mid) 45%,
+      var(--border-grad-amber-end)
+    ) border-box;
+}
+
+/* Masked Gradient Border (For surfaces with background artwork/media) */
+.border-gradient-mask {
+  position: relative;
+}
+
+.border-gradient-mask::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    var(--border-grad-highlight),
+    var(--border-grad-mid) 50%,
+    var(--border-grad-fade)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Flat Structural Hairline Border */
+.border-hairline {
+  border: 1px solid var(--border-subtle);
+}
+
+.border-hairline-strong {
+  border: 1px solid var(--border-strong);
+}
+
+/* =========================================================================
+   7. Beautiful Shadows Utility Classes (beautiful-shadows)
+   ========================================================================= */
+
+.shadow-sm {
+  box-shadow: var(--shadow-beautiful-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-beautiful-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-beautiful-lg);
+}
+
+.shadow-specular-sm {
+  box-shadow: var(--shadow-specular-sm);
+}
+
+.shadow-specular-md {
+  box-shadow: var(--shadow-specular-md);
+}
+
+.shadow-specular-lg {
+  box-shadow: var(--shadow-specular-lg);
+}
+
+/* =========================================================================
+   8. Concentric Radius Utility Classes
+   ========================================================================= */
+
+.radius-bento {
+  border-radius: var(--radius-bento);
+}
+
+.radius-hero {
+  border-radius: var(--radius-hero);
+}
+
+.radius-modal {
+  border-radius: var(--radius-modal);
+}
+
+.radius-control {
+  border-radius: var(--radius-control);
+}
+
+.radius-pill {
+  border-radius: var(--radius-pill);
+}
+
+/* Concentric nested child helper */
+.radius-nested-bento {
+  /* 16px outer - 8px inner padding = 8px inner radius */
+  border-radius: calc(var(--radius-bento) - 8px);
+}
+
+.radius-nested-modal {
+  /* 24px outer - 12px inner padding = 12px inner radius */
+  border-radius: calc(var(--radius-modal) - 12px);
+}
+
+/* =========================================================================
+   9. Interactive Surface Physics & Micro-Interactions
+   ========================================================================= */
+
+.surface-interactive {
+  transition: 
+    transform 180ms cubic-bezier(0.25, 1, 0.5, 1),
+    box-shadow 180ms cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 180ms cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.surface-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-specular-lg);
+}
+
+.surface-interactive:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 80ms;
+}
+
+/* Keyboard Accessible Focus Indicator */
+.focus-ring-amber:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus-amber);
+}
+
+/* =========================================================================
+   10. Reduced-Motion Fallbacks (prefers-reduced-motion)
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .surface-interactive,
+  .surface-interactive:hover,
+  .surface-interactive:active {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

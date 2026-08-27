@@ -9,17 +9,17 @@
 - **Target Stack**: `vite-react`
 - **Aesthetic Vibe**: `editorial-tech`
 - **Active Wave**: `Wave 6: Component Engineering, Motion & Assets`
-- **Active Stage**: `Stage 8`
-- **Active Sub-Phase**: `Phase 8.3`
-- **Last Updated**: `2026-08-27 04:55 UTC`
+- **Active Stage**: `Stage 9`
+- **Active Sub-Phase**: `Phase 9.1`
+- **Last Updated**: `2026-08-27 05:25 UTC`
 
 ---
 
 ## Multi-Session Resume Anchor
 - **Resume Directive**: In any new chat, simply prompt:  
-  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 8.3.`
-- **Active Target Artifact**: Typographic reveals & kinetic micro-interactions (`specs/phase-8.3-spec.md`)
-- **Current DoD Status**: `[COMPLETED - Phase 8.1 | Phase 8.3 Next]`
+  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 9.1.`
+- **Active Target Artifact**: Deterministic Vector Iconography & CC0 Photography (`src/assets/`)
+- **Current DoD Status**: `[COMPLETED - Phase 8.4 | Phase 9.1 Next]`
 
 ---
 
@@ -44,8 +44,8 @@
 | **W6** | **7.1** | Atomic Components & States | Reusable components | Scale-on-press (0.97), state machine logic | `[x]` |
 | **W6** | **7.3** | Form UX, Validation & Feedback | Form components | Inline validation, Sonner toasts | `[x]` |
 | **W6** | **8.1** | Lenis Scroll & GSAP Scrollytelling | `context/4-motion-choreography.md` | Pinned sections, scrubbed timelines | `[x]` |
-| **W6** | **8.3** | Typographic Reveals & Physics | Motion components | Word-by-word reveal, magnetic cursor | `[ ]` |
-| **W6** | **8.4** | Interactive 3D / WebGL FX | Canvas stages | Reactive WebGL background or 3D globe | `[ ]` |
+| **W6** | **8.3** | Typographic Reveals & Physics | Motion components | Word-by-word reveal, magnetic cursor | `[x]` |
+| **W6** | **8.4** | Interactive 3D / WebGL FX | Canvas stages | Reactive WebGL background or 3D globe | `[x]` |
 | **W6** | **9.1** | Vector Icons & CC0 Photos | `src/assets/` | Sanitized Solar SVGs, authentic CC0 photos | `[ ]` |
 | **W7** | **10.1** | Destructive Stress Testing | Zero-overflow patch | 320px container test, 500-char strings | `[ ]` |
 | **W7** | **11.1** | Playwright 5-Viewport Capture | `audits/visual-qa/` | 1920, 1440, 1024, 768, 375px screenshots | `[ ]` |

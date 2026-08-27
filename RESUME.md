@@ -1,11 +1,11 @@
 # [RESUME ANCHOR] vidya-dham-academy
 
 > **Project Root**: `projects/Websites/vidya-dham-academy`  
-> **Last Synchronized**: `2026-08-27 04:22 UTC`  
-> **Active Stage**: Stage 6 (Surface Aesthetics, Materiality & Atmospheric Shaders)  
-> **Active Sub-Phase**: Phase 6.3 (Atmospheric Textures & Noise Canvas Engineering)  
-> **Active Chat Session**: Chat 14  
-> **Status**: `[READY FOR PHASE 6.3]`  
+> **Last Synchronized**: `2026-08-27 04:30 UTC`  
+> **Active Stage**: Stage 7 (Component Engineering, Form UX & State Machines)  
+> **Active Sub-Phase**: Phase 7.1 (Atomic Components & Emil Micro-Interaction Engineering)  
+> **Active Chat Session**: Chat 15  
+> **Status**: `[READY FOR PHASE 7.1]`  
 
 ---
 
@@ -14,26 +14,25 @@
 Whenever you open a fresh chat in your IDE, simply paste:
 
 ```markdown
-Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 6.3.
+Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 7.1.
 ```
 
 ---
 
 ## Active Phase Summary & Invariants
 
-- **Active Sub-Phase**: `Phase 6.3 -- Atmospheric Textures & Noise Canvas Engineering`
+- **Active Sub-Phase**: `Phase 7.1 -- Atomic Components & Emil Micro-Interaction Engineering`
 - **Mandatory Pre-flight**: Run [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md) security check.
 - **Zero-Emoji Mandate**: Absolutely zero emojis across chat, code, and documentation. Use `[PASS]`, `[FAIL]`, `[ACTIVE]`.
-- **Target Artifact**: Background atmospheric layer & blur masks (`specs/phase-6.3-spec.md`)
-- **Mandatory Skills**: [`dither-background`](file:///d:/Design-OS/.agents/skills/dither-background/SKILL.md), [`progressive-blur`](file:///d:/Design-OS/.agents/skills/progressive-blur/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
+- **Target Artifact**: Atomic components & button micro-interactions (`specs/phase-7.1-spec.md`)
+- **Mandatory Skills**: [`component-spec`](file:///d:/Design-OS/.agents/skills/component-spec/SKILL.md), [`state-machine`](file:///d:/Design-OS/.agents/skills/state-machine/SKILL.md), [`emil-design-eng`](file:///d:/Design-OS/.agents/skills/emil-design-eng/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
 - **Allowed Write Paths**:
-  - `src/styles/atmosphere.css` or `src/styles/**/*`
-  - `src/components/AtmosphereCanvas.tsx` or background layer
-  - `specs/phase-6.3-spec.md`
+  - `src/components/**/*`
+  - `specs/phase-7.1-spec.md`
   - `context/6-progress-tracker.md`
   - `RESUME.md`
   - `NEXT_CHAT_PROMPT.md`
-- **Forbidden Write Paths**: `[src/components/interactive/**/*, context/4-motion-choreography.md]`
+- **Forbidden Write Paths**: `[src/components/forms/**/*, context/4-motion-choreography.md, context/7-seo-and-a11y.md]`
 
 ---
 
@@ -53,7 +52,8 @@ graph TD
   P4_3 --> P5_1["5.1 Obys Grid & Macrostructure"]:::completed
   P5_1 --> P5_4["5.4 UI Component Manifest"]:::completed
   P5_4 --> P6_1["6.1 Tactile Elevation & Borders"]:::completed
-  P6_1 --> P6_3["6.3 Atmospheric Noise & Shaders"]:::active
+  P6_1 --> P6_3["6.3 Atmospheric Noise & Shaders"]:::completed
+  P6_3 --> P7_1["7.1 Atomic Components & States"]:::active
 
   classDef completed fill:#059669,stroke:#10b981,color:#ffffff,stroke-width:2px;
   classDef active fill:#d97706,stroke:#f59e0b,color:#ffffff,stroke-width:3px;

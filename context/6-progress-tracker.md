@@ -8,18 +8,18 @@
 - **Project Name**: `vidya-dham-academy`
 - **Target Stack**: `vite-react`
 - **Aesthetic Vibe**: `editorial-tech`
-- **Active Wave**: `Wave 5: Macrostructure & Surface Materiality`
-- **Active Stage**: `Stage 6`
-- **Active Sub-Phase**: `Phase 6.3`
-- **Last Updated**: `2026-08-27 04:20 UTC`
+- **Active Wave**: `Wave 6: Component Engineering, Motion & Assets`
+- **Active Stage**: `Stage 7`
+- **Active Sub-Phase**: `Phase 7.1`
+- **Last Updated**: `2026-08-27 04:30 UTC`
 
 ---
 
 ## Multi-Session Resume Anchor
 - **Resume Directive**: In any new chat, simply prompt:  
-  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 6.3.`
-- **Active Target Artifact**: Background atmospheric layer & blur masks (`specs/phase-6.3-spec.md`)
-- **Current DoD Status**: `[COMPLETED - Phase 6.1 | Phase 6.3 Next]`
+  `Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 7.1.`
+- **Active Target Artifact**: Atomic components & button micro-interactions (`specs/phase-7.1-spec.md`)
+- **Current DoD Status**: `[COMPLETED - Phase 6.3 | Phase 7.1 Next]`
 
 ---
 
@@ -40,7 +40,7 @@
 | **W5** | **5.1** | Anti-Monoculture Layout & Obys Grid| Layout skeleton | Obys 140px vertical rhythm, 12-col grid | `[x]` |
 | **W5** | **5.4** | UI Component Manifest | `context/3-ui-manifest.md` | Exhaustive component & state catalog | `[x]` |
 | **W5** | **6.1** | Tactile Elevation & Hairline Borders| Surface CSS module | Concentric border radii, layered shadows | `[x]` |
-| **W5** | **6.3** | Atmospheric Noise & Shaders | Background layer | Backdrop blur masks, procedural noise | `[ ]` |
+| **W5** | **6.3** | Atmospheric Noise & Shaders | Background layer | Backdrop blur masks, procedural noise | `[x]` |
 | **W6** | **7.1** | Atomic Components & States | Reusable components | Scale-on-press (0.97), state machine logic | `[ ]` |
 | **W6** | **7.3** | Form UX, Validation & Feedback | Form components | Inline validation, Sonner toasts | `[ ]` |
 | **W6** | **8.1** | Lenis Scroll & GSAP Scrollytelling | `context/4-motion-choreography.md` | Pinned sections, scrubbed timelines | `[ ]` |
@@ -62,6 +62,6 @@
 | **Wave 2 Gate** | Visual Style Contract Sealed | Zero slop traits | `checkpoint/wave-2-aesthetics` | `[PASSED]` |
 | **Wave 3 Gate** | Scrollytelling Sitemap Validated | Fluid hierarchy | `checkpoint/wave-3-structure` | `[PASSED]` |
 | **Wave 4 Gate** | Mathematical Token Contrast Floor | WCAG 2.2 AA (>= 85) | `checkpoint/wave-4-tokens` | `[PASSED]` |
-| **Wave 5 Gate** | Obys Spatial & Surface Hardening | No horizontal scroll | `checkpoint/wave-5-surfaces` | `[ACTIVE]` |
-| **Wave 6 Gate** | 60fps Motion & Asset Integration | Score >= 85/100 | `checkpoint/wave-6-components` | `[PENDING]` |
+| **Wave 5 Gate** | Obys Spatial & Surface Hardening | No horizontal scroll | `checkpoint/wave-5-surfaces` | `[PASSED]` |
+| **Wave 6 Gate** | 60fps Motion & Asset Integration | Score >= 85/100 | `checkpoint/wave-6-components` | `[ACTIVE]` |
 | **Wave 7 Gate** | Multi-Engine Visual QA & SEO | Zero AST errors | `checkpoint/wave-7-final` | `[PENDING]` |

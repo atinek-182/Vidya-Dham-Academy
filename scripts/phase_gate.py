@@ -11,6 +11,7 @@ import json
 import re
 import subprocess
 import argparse
+import fnmatch
 
 if sys.platform == "win32":
     try:
@@ -83,7 +84,7 @@ def check_blast_radius(project_dir: str, allowed_paths: list) -> tuple:
                 if mf.startswith(prefix) and "/" not in mf[len(prefix)+1:]:
                     is_allowed = True
                     break
-            elif mf == ap or mf.endswith(ap):
+            elif mf == ap or mf.endswith(ap) or fnmatch.fnmatch(mf, ap):
                 is_allowed = True
                 break
         

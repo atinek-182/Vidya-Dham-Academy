@@ -1,0 +1,176 @@
+/**
+ * Vidya Dham Academy - Atmospheric Layer & Progressive Blur CSS Module
+ * Phase 6.3: Atmospheric Textures & Noise Canvas Engineering
+ * 
+ * Complies with:
+ * - dither-background: Monochrome slate dither field with near-black base
+ * - progressive-blur: 8-stop stepped backdrop-filter blur mask under monastic nav dock
+ * - vibesec: Zero external imports, hardware-accelerated composite layer isolation
+ */
+
+/* =========================================================================
+   1. Atmospheric Dither Canvas Host Layer
+   ========================================================================= */
+.atmosphere-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--surface-canvas, #05070c);
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+}
+
+/* =========================================================================
+   2. 8-Stop Progressive Blur Dock (Under Fixed Monastic Header)
+   Height: 96px (6.0rem) spanning below 64px header line
+   Blur sequence: 0.5px -> 1px -> 2px -> 4px -> 8px -> 16px -> 32px -> 64px
+   ========================================================================= */
+.progressive-blur-dock {
+  position: fixed;
+  z-index: 35;
+  inset: 0 0 auto 0;
+  height: 96px;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.progressive-blur-dock > div,
+.progressive-blur-dock::before,
+.progressive-blur-dock::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Stop 1: 0.5px blur */
+.progressive-blur-dock::before {
+  content: "";
+  z-index: 1;
+  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 37.5%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 37.5%);
+}
+
+/* Stop 2: 1.0px blur */
+.progressive-blur-dock > div:nth-of-type(1) {
+  z-index: 2;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 0) 50%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 0) 50%);
+}
+
+/* Stop 3: 2.0px blur */
+.progressive-blur-dock > div:nth-of-type(2) {
+  z-index: 3;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 62.5%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 62.5%);
+}
+
+/* Stop 4: 4.0px blur */
+.progressive-blur-dock > div:nth-of-type(3) {
+  z-index: 4;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 0) 75%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 0) 75%);
+}
+
+/* Stop 5: 8.0px blur */
+.progressive-blur-dock > div:nth-of-type(4) {
+  z-index: 5;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 87.5%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 87.5%);
+}
+
+/* Stop 6: 16.0px blur */
+.progressive-blur-dock > div:nth-of-type(5) {
+  z-index: 6;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Stop 7: 32.0px blur */
+.progressive-blur-dock > div:nth-of-type(6) {
+  z-index: 7;
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 1) 100%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* Stop 8: 64.0px blur */
+.progressive-blur-dock::after {
+  content: "";
+  z-index: 8;
+  -webkit-backdrop-filter: blur(64px);
+  backdrop-filter: blur(64px);
+  -webkit-mask: linear-gradient(to top, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
+  mask: linear-gradient(to top, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* =========================================================================
+   3. Mobile Bottom Command Strip Progressive Blur (Safe Area Grounding)
+   ========================================================================= */
+.progressive-blur-bottom {
+  position: fixed;
+  z-index: 35;
+  inset: auto 0 0 0;
+  height: 80px;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.progressive-blur-bottom > div,
+.progressive-blur-bottom::before,
+.progressive-blur-bottom::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.progressive-blur-bottom::before {
+  content: "";
+  z-index: 1;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 50%);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 50%);
+}
+
+.progressive-blur-bottom > div:nth-of-type(1) {
+  z-index: 2;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 85%);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 85%);
+}
+
+.progressive-blur-bottom::after {
+  content: "";
+  z-index: 3;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  -webkit-mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+/* =========================================================================
+   4. Reduced Motion & Performance Adaptations
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere-canvas {
+    animation: none !important;
+  }
+}

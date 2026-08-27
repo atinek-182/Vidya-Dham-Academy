@@ -1,11 +1,11 @@
 # [RESUME ANCHOR] vidya-dham-academy
 
 > **Project Root**: `projects/Websites/vidya-dham-academy`  
-> **Last Synchronized**: `2026-08-27 05:25 UTC`  
-> **Active Stage**: Stage 9 (Deterministic Asset Binding & Media Pipeline)  
-> **Active Sub-Phase**: Phase 9.1 (Deterministic Vector Iconography & CC0 Photography Binding)  
-> **Active Chat Session**: Chat 20  
-> **Status**: `[READY FOR PHASE 9.1]`  
+> **Last Synchronized**: `2026-08-27 06:00 UTC`  
+> **Active Stage**: Stage 10 (Edge-Case Stress Testing & Platform Adaptation)  
+> **Active Sub-Phase**: Phase 10.1 (Destructive Edge-Case Stress Testing & Localization Hardening)  
+> **Active Chat Session**: Chat 21  
+> **Status**: `[READY FOR PHASE 10.1]`  
 
 ---
 
@@ -14,22 +14,21 @@
 Whenever you open a fresh chat in your IDE, simply paste:
 
 ```markdown
-Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 9.1.
+Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 10.1.
 ```
 
 ---
 
 ## Active Phase Summary & Invariants
 
-- **Active Sub-Phase**: `Phase 9.1 -- Deterministic Vector Iconography & CC0 Photography Binding`
-- **Mandatory Pre-flight**: Run [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md) security check & SVG sanitization.
+- **Active Sub-Phase**: `Phase 10.1 -- Destructive Edge-Case Stress Testing & Localization Hardening`
+- **Mandatory Pre-flight**: Run [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md) security check.
 - **Zero-Emoji Mandate**: Absolutely zero emojis across chat, code, and documentation. Use `[PASS]`, `[FAIL]`, `[ACTIVE]`.
-- **Target Artifact**: Curated icon system & authentic CC0 photography (`src/assets/`)
-- **Mandatory Skills**: [`solar-duotone-bold`](file:///d:/Design-OS/.agents/skills/solar-duotone-bold/SKILL.md), Openverse API, `sanitize_svg.py`, [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
+- **Target Artifact**: Stress-testing specification & zero-overflow patch (`specs/phase-10.1-spec.md`, `src/**/*`)
+- **Mandatory Skills**: [`break`](file:///d:/Design-OS/.agents/skills/break/SKILL.md), [`localization-design`](file:///d:/Design-OS/.agents/skills/localization-design/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
 - **Allowed Write Paths**:
-  - `src/assets/**/*`
-  - `src/components/**/*`
-  - `specs/phase-9.1-spec.md`
+  - `src/**/*` (overflow patches, truncation, boundary constraints)
+  - `specs/phase-10.1-spec.md`
   - `context/6-progress-tracker.md`
   - `RESUME.md`
   - `NEXT_CHAT_PROMPT.md`
@@ -59,7 +58,8 @@ graph TD
   P7_3 --> P8_1["8.1 Lenis & GSAP Scrollytelling"]:::completed
   P8_1 --> P8_3["8.3 Typographic Reveals & Physics"]:::completed
   P8_3 --> P8_4["8.4 WebGL Shaders & Canvas FX"]:::completed
-  P8_4 --> P9_1["9.1 Vector SVGs & CC0 Photos"]:::active
+  P8_4 --> P9_1["9.1 Vector SVGs & CC0 Photos"]:::completed
+  P9_1 --> P10_1["10.1 Destructive Stress Testing"]:::active
 
   classDef completed fill:#059669,stroke:#10b981,color:#ffffff,stroke-width:2px;
   classDef active fill:#d97706,stroke:#f59e0b,color:#ffffff,stroke-width:3px;

@@ -12,3 +12,8 @@ export type { CardBentoProps } from './CardBento';
 
 export { StatusBadge } from './StatusBadge';
 export type { StatusBadgeProps } from './StatusBadge';
+
+export * from './icons';
+export * from './forms';
+export * from './canvas';
+export * from './effects';

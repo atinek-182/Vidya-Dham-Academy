@@ -3,6 +3,7 @@ import React, { useRef, useCallback } from 'react';
 export interface CardBentoProps {
   colSpan?: string;
   tag?: string;
+  icon?: React.ReactNode;
   title: string;
   description?: string;
   children?: React.ReactNode;
@@ -27,6 +28,7 @@ export interface CardBentoProps {
 export const CardBento: React.FC<CardBentoProps> = ({
   colSpan = 'col-span-4 sm:col-span-8 lg:col-span-6',
   tag,
+  icon,
   title,
   description,
   children,
@@ -100,11 +102,20 @@ export const CardBento: React.FC<CardBentoProps> = ({
       />
 
       {/* Card Header Content */}
-      {(tag || title || description) && (
-        <div className="relative z-10 space-y-2 mb-6">
-          {tag && (
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-400 font-mono text-xs uppercase tracking-wider">
-              <span>{tag}</span>
+      {(tag || icon || title || description) && (
+        <div className="relative z-10 space-y-3 mb-6">
+          {(tag || icon) && (
+            <div className="flex items-center gap-3">
+              {icon && (
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-amber-400 text-lg">
+                  {icon}
+                </div>
+              )}
+              {tag && (
+                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-400 font-mono text-xs uppercase tracking-wider">
+                  <span>{tag}</span>
+                </div>
+              )}
             </div>
           )}
           {title && (

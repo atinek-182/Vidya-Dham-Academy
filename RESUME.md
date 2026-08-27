@@ -1,11 +1,11 @@
 # [RESUME ANCHOR] vidya-dham-academy
 
 > **Project Root**: `projects/Websites/vidya-dham-academy`  
-> **Last Synchronized**: `2026-08-26 18:05 UTC`  
-> **Active Stage**: Stage 5 (Macrostructure Rotation, Section Rhythm & Obys Grid)  
-> **Active Sub-Phase**: Phase 5.4 (UI Component Manifest & State Matrix Engineering)  
-> **Active Chat Session**: Chat 12  
-> **Status**: `[READY FOR PHASE 5.4]`  
+> **Last Synchronized**: `2026-08-27 04:10 UTC`  
+> **Active Stage**: Stage 6 (Surface Aesthetics, Materiality & Atmospheric Shaders)  
+> **Active Sub-Phase**: Phase 6.1 (Tactile Surface Elevation & Hairline Border Engineering)  
+> **Active Chat Session**: Chat 13  
+> **Status**: `[READY FOR PHASE 6.1]`  
 
 ---
 
@@ -14,21 +14,21 @@
 Whenever you open a fresh chat in your IDE, simply paste:
 
 ```markdown
-Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 5.4.
+Resume project at projects/Websites/vidya-dham-academy. Read RESUME.md, run vibesec pre-flight, and execute Phase 6.1.
 ```
 
 ---
 
 ## Active Phase Summary & Invariants
 
-- **Active Sub-Phase**: `Phase 5.4 -- UI Component Manifest & State Matrix Engineering`
+- **Active Sub-Phase**: `Phase 6.1 -- Tactile Surface Elevation & Hairline Border Engineering`
 - **Mandatory Pre-flight**: Run [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md) security check.
 - **Zero-Emoji Mandate**: Absolutely zero emojis across chat, code, and documentation. Use `[PASS]`, `[FAIL]`, `[ACTIVE]`.
-- **Target Artifact**: Component manifest specifications & `context/3-ui-manifest.md`
-- **Mandatory Skills**: [`component-spec`](file:///d:/Design-OS/.agents/skills/component-spec/SKILL.md), [`pattern-library`](file:///d:/Design-OS/.agents/skills/pattern-library/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
+- **Target Artifact**: Surface CSS module & elevation tokens (`specs/phase-6.1-spec.md`)
+- **Mandatory Skills**: [`beautiful-shadows`](file:///d:/Design-OS/.agents/skills/beautiful-shadows/SKILL.md), [`css-border-gradient`](file:///d:/Design-OS/.agents/skills/css-border-gradient/SKILL.md), [`liquid-metal-border`](file:///d:/Design-OS/.agents/skills/liquid-metal-border/SKILL.md), [`vibesec`](file:///d:/Design-OS/.agents/skills/vibesec/SKILL.md)
 - **Allowed Write Paths**:
-  - `context/3-ui-manifest.md`
-  - `specs/phase-5.4-spec.md`
+  - `src/styles/surfaces.css` or `src/styles/**/*`
+  - `specs/phase-6.1-spec.md`
   - `context/6-progress-tracker.md`
   - `RESUME.md`
   - `NEXT_CHAT_PROMPT.md`
@@ -50,7 +50,8 @@ graph TD
   P3_4 --> P4_1["4.1 OKLCH Palette & Contrast"]:::completed
   P4_1 --> P4_3["4.3 Fluid Typography & Scale"]:::completed
   P4_3 --> P5_1["5.1 Obys Grid & Macrostructure"]:::completed
-  P5_1 --> P5_4["5.4 UI Component Manifest"]:::active
+  P5_1 --> P5_4["5.4 UI Component Manifest"]:::completed
+  P5_4 --> P6_1["6.1 Tactile Elevation & Borders"]:::active
 
   classDef completed fill:#059669,stroke:#10b981,color:#ffffff,stroke-width:2px;
   classDef active fill:#d97706,stroke:#f59e0b,color:#ffffff,stroke-width:3px;
